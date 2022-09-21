@@ -54,14 +54,32 @@ namespace Estudio
                 MessageBox.Show("Usuário/Senha inválidos");
             if (tipo == 1)
             {
-                MessageBox.Show("Usuário ADM");
+                MessageBox.Show("Usuário ADM") ;
                 groupBox1.Visible = false;
+                menuStrip1.Enabled = true;
             }
             if (tipo == 2)
             {
                 MessageBox.Show("Usuário Restrito");
                 groupBox1.Visible = false;
+                menuStrip1.Enabled = true;
+                cadastrarLoginToolStripMenuItem.Enabled = false;
             }
+        }
+
+        private void cadastrarLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadLogin cad_login = new cadLogin();
+            cad_login.MdiParent = this;
+            cad_login.Show();
+        }
+
+        private void cadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadAluno cad_aluno = new cadAluno();
+            cad_aluno.MdiParent = this;
+            cad_aluno.Show();
+
         }
     }
 }

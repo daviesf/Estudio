@@ -52,5 +52,26 @@ namespace Estudio
             }
             return tipo;
         }
+
+        public Boolean cadLogin(string usuario, string senha, int tipo)
+        {
+            bool cad = false;
+            try
+            {
+                con.Open();
+                MySqlCommand insere = new MySqlCommand("insert into Estudio_Login (usuario, senha, tipo) values ('" + usuario + "','" + senha + "'," + tipo + ")", con);
+                insere.ExecuteNonQuery();
+                cad = true;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+            return cad;
+        }
+       
     }
 }
