@@ -53,7 +53,7 @@ namespace Estudio
             return tipo;
         }
 
-        public Boolean cadLogin(string usuario, string senha, int tipo)
+        public static Boolean cadLogin(string usuario, string senha, int tipo)
         {
             bool cad = false;
             try
