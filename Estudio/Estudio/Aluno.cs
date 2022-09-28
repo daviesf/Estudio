@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -149,5 +150,25 @@ namespace Estudio
             return CPF;
         }
 
+        public bool cadastrarAluno()
+        {
+            bool cad = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand insere = new MySqlCommand("insert into Estudio_Aluno (CPFAluno, nomeAluno, ruaAluno, numeroAluno, bairroAluno, complementoAluno, CEPAluno, cidadeAluno, estadoAluno, telefoneAluno, emailAluno) values ('" + CPF + "','" + Nome + "','" + Rua + "','" + Numero + "','" + Bairro + "','" + Complemento + "','" + CEP + "','" + Cidade + "','" + Estado + "','" + Telefone + "','" + Email + "')", DAO_Conexao.con);
+                insere.ExecuteNonQuery();
+                cad = true;
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            } finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return cad;
+        }
     }
 }
+#endregion
