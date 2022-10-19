@@ -23,6 +23,7 @@ namespace Estudio
         private string Email;
         private byte[] Foto;
         private bool Ativo;
+        private string text;
 
         public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email) {
             DAO_Conexao.getConexao("143.106.241.3", "cl201278", "cl201278", "cl*03082005");
@@ -38,6 +39,11 @@ namespace Estudio
             setTelefone(telefone);
             setEmail(email);
             // setFoto(foto);
+        }
+
+        public Aluno(string text)
+        {
+            this.text = text;
         }
 
         public void setEmail(string email)
@@ -168,6 +174,49 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
             return cad;
+        }
+
+        public bool consultarAluno()
+        {
+            bool existe = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno='" + CPF + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                if (resultado.Read()) 
+                    existe = true; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return existe;
+        }
+
+        public bool excluirAluno()
+        {
+            bool exc = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand exclui = new MySqlCommand("UPDATE Estudio_Aluno SET ativo=1 WHERE CPFAluno = '" + CPF + "'", DAO_Conexao.con);
+                exclui.ExecuteNonQuery();
+                exc = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return exc;
         }
     }
 }

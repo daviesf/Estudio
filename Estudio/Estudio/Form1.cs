@@ -81,5 +81,12 @@ namespace Estudio
             cad_aluno.Show();
 
         }
+
+        private void excluirAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            excAluno exc_aluno = new excAluno();
+            exc_aluno.MdiParent = this;
+            exc_aluno.Show();
+        }
     }
 }
