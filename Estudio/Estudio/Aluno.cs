@@ -23,7 +23,6 @@ namespace Estudio
         private string Email;
         private byte[] Foto;
         private bool Ativo;
-        private string text;
 
         public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email) {
             DAO_Conexao.getConexao("143.106.241.3", "cl201278", "cl201278", "cl*03082005");
@@ -41,9 +40,9 @@ namespace Estudio
             // setFoto(foto);
         }
 
-        public Aluno(string text)
+        public Aluno(string cpf)
         {
-            this.text = text;
+            this.CPF = cpf;
         }
 
         public void setEmail(string email)

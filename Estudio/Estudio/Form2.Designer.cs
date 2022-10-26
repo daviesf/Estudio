@@ -266,7 +266,7 @@ namespace Estudio
             // txtCPF
             // 
             this.txtCPF.Location = new System.Drawing.Point(82, 29);
-            this.txtCPF.Mask = " ###,###,###-##";
+            this.txtCPF.Mask = "###,###,###-##";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 1;
