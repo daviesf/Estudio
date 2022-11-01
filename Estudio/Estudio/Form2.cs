@@ -41,5 +41,10 @@ namespace Estudio
                 }
             }
         }
+
+        private void cadAluno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -308,6 +308,7 @@ namespace Estudio
             this.Controls.Add(this.groupBox1);
             this.Name = "cadAluno";
             this.Text = "Cadastrar Aluno";
+            this.Load += new System.EventHandler(this.cadAluno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

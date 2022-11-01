@@ -88,5 +88,34 @@ namespace Estudio
             exc_aluno.MdiParent = this;
             exc_aluno.Show();
         }
+
+        private void cadastrarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadModalidade cad_mod = new cadModalidade();
+            cad_mod.MdiParent = this;
+            cad_mod.Show();
+        }
+
+        private void excluirModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            excModalidade exc_mod = new excModalidade();
+            exc_mod.MdiParent = this;
+            exc_mod.Show();
+        }
+
+        private void consultarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            consModalidade cons_mod = new consModalidade();
+            cons_mod.MdiParent = this;
+            cons_mod.Show();
+        }
+
+        private void atualizarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int a = 0;
+            consModalidade cons_mod = new consModalidade(a);
+            cons_mod.MdiParent = this;
+            cons_mod.Show();
+        }
     }
 }
