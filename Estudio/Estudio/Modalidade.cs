@@ -72,8 +72,6 @@ namespace Estudio
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
-            finally {
                 DAO_Conexao.con.Close();
             }
             return res;
@@ -96,10 +94,26 @@ namespace Estudio
             return res;
         }
 
-        /*public bool atualizarModalidade()
+        public bool atualizarModalidade()
         {
+            bool flag = false;
 
-        }*/
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand att = new MySqlCommand("UPDATE Estudio_Modalidade SET precoModalidade =" + Preco + ", qtdeAlunos =" + qtde_alunos + ", qtdeAulas = " + qtde_aulas + " WHERE descricaoModalidade like '" + Descricao + "'", DAO_Conexao.con);
+                att.ExecuteNonQuery();
+                flag = true;
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+               
+            } finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return flag;
+        }
 
         public bool excluirModalidade()
         {
@@ -107,7 +121,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand exclui = new MySqlCommand("UPDATE Estudio_Modalidade SET ativo=1 WHERE descricaoModalidade = '" + Descricao + "'", DAO_Conexao.con);
+                MySqlCommand exclui = new MySqlCommand("UPDATE Estudio_Modalidade SET ativa=1 WHERE descricaoModalidade like '" + Descricao + "'", DAO_Conexao.con);
                 exclui.ExecuteNonQuery();
                 flag = true;
             }

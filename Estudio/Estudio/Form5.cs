@@ -31,9 +31,9 @@ namespace Estudio
         {
             Modalidade mod = new Modalidade(txtDesc.Text, float.Parse(txtPreco.Text), int.Parse(txtAluno.Text), int.Parse(txtAula.Text));
             if(mod.cadastrarModalidade())
-                MessageBox.Show("Cadastro realizado com sucesso");
+                MessageBox.Show("Cadastro feito com sucesso","Aviso do Sistema",MessageBoxButtons.OK,MessageBoxIcon.Information);
             else
-                MessageBox.Show("Erro de cadastro!");
+                MessageBox.Show("Erro de cadastro!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

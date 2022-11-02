@@ -216,7 +216,8 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
             return exc;
+
         }
+        #endregion
     }
 }
-#endregion

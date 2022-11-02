@@ -30,7 +30,7 @@ namespace Estudio
         private void InitializeComponent()
         {
             this.ConsultaModalidade = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,7 +38,7 @@ namespace Estudio
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ConsultaModalidade.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,13 +60,14 @@ namespace Estudio
             this.ConsultaModalidade.TabStop = false;
             this.ConsultaModalidade.Text = "Modalidades";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(377, 21);
-            this.comboBox1.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Descrição:";
             // 
             // button1
             // 
@@ -76,6 +77,7 @@ namespace Estudio
             this.button1.TabIndex = 15;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
@@ -125,14 +127,14 @@ namespace Estudio
             this.label2.TabIndex = 9;
             this.label2.Text = "Preço:";
             // 
-            // label1
+            // comboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Descrição:";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(72, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(377, 21);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // consModalidade
             // 
@@ -142,6 +144,7 @@ namespace Estudio
             this.Controls.Add(this.ConsultaModalidade);
             this.Name = "consModalidade";
             this.Text = "Estúdio - [Consultar Modalidade]";
+            this.Load += new System.EventHandler(this.consModalidade_Load);
             this.ConsultaModalidade.ResumeLayout(false);
             this.ConsultaModalidade.PerformLayout();
             this.ResumeLayout(false);

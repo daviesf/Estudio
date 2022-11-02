@@ -38,10 +38,10 @@ namespace Estudio
         private void button1_Click(object sender, EventArgs e)
         {
             Modalidade m = new Modalidade(comboBox1.Text);
-            if (m.excluirModalidade) 
-                // aa
+            if (m.excluirModalidade())
+                MessageBox.Show("Exclusão realizada com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                // aa
+                MessageBox.Show("Erro de exclusão!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

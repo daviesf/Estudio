@@ -103,19 +103,24 @@ namespace Estudio
             exc_mod.Show();
         }
 
-        private void consultarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void atualizarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             consModalidade cons_mod = new consModalidade();
             cons_mod.MdiParent = this;
             cons_mod.Show();
         }
 
-        private void atualizarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void consultarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int a = 0;
             consModalidade cons_mod = new consModalidade(a);
             cons_mod.MdiParent = this;
             cons_mod.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
