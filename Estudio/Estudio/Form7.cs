@@ -17,6 +17,7 @@ namespace Estudio
         {
             InitializeComponent();
             carregaCombo();
+            this.Text = "Estúdio - [Atualizar Modalidade]";
         }
 
         public consModalidade(int a)

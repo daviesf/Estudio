@@ -62,6 +62,7 @@ namespace Estudio
             this.Controls.Add(this.txtCPF);
             this.Name = "excAluno";
             this.Text = "Exclusão de Aluno";
+            this.Load += new System.EventHandler(this.excAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

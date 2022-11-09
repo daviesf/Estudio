@@ -72,7 +72,7 @@ namespace Estudio
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
+            this.label3.Size = new System.Drawing.Size(38, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo:";
             // 
@@ -107,7 +107,7 @@ namespace Estudio
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha:";
             // 
@@ -117,7 +117,7 @@ namespace Estudio
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuário:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -129,7 +129,7 @@ namespace Estudio
             this.ClientSize = new System.Drawing.Size(520, 229);
             this.Controls.Add(this.groupBox1);
             this.Name = "cadLogin";
-            this.Text = "Form3";
+            this.Text = "Cadastrar Login";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -41,5 +41,10 @@ namespace Estudio
                 }
             }
         }
+
+        private void excAluno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
