@@ -39,7 +39,12 @@ namespace Estudio
         {
             Modalidade m = new Modalidade(comboBox1.Text);
             if (m.excluirModalidade())
+            {
                 MessageBox.Show("Exclusão realizada com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboBox1.Items.Clear();
+                comboBox1.Text = String.Empty;
+                carregaCombo();
+            }
             else
                 MessageBox.Show("Erro de exclusão!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
