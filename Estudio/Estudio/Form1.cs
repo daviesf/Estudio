@@ -132,7 +132,7 @@ namespace Estudio
         {
             if (Application.OpenForms.OfType<consModalidade>().Count() == 0)
             {
-                int a = 0;
+                int a = 0; // Variável genérica, tem o intuito apenas de chamar um construtor diferente na classe do formulário e abrir de maneira diferente.
                 consModalidade cons_mod = new consModalidade(a);
                 cons_mod.MdiParent = this;
                 cons_mod.Show();
