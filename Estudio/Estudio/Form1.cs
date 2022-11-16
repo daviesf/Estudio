@@ -143,5 +143,15 @@ namespace Estudio
         {
             Application.Exit();
         }
+
+        private void cadastarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<cadAluno>().Count() == 0)
+            {
+                Cad_Turma cad_Turma = new Cad_Turma();
+                cad_Turma.MdiParent = this;
+                cad_Turma.Show();
+            }
+        }
     }
 }
