@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Estudio
 {
-    public partial class Form10 : Form
+    public partial class AtualizarModalidade : Form
     {
-        public Form10()
+        public AtualizarModalidade()
         {
             InitializeComponent();
         }

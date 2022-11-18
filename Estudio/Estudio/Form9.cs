@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Estudio
 {
-    public partial class Form9 : Form
+    public partial class ExcluirTurma : Form
     {
-        public Form9()
+        public ExcluirTurma()
         {
             InitializeComponent();
         }
