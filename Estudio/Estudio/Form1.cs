@@ -153,5 +153,22 @@ namespace Estudio
                 cad_Turma.Show();
             }
         }
+
+        private void consultarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<cadAluno>().Count() == 0)
+            {
+                AtualizarModalidade atu_Turma = new AtualizarModalidade();
+                atu_Turma.MdiParent = this;
+                atu_Turma.Show();
+            }
+        }
+
+        private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcluirTurma ex_Turma = new ExcluirTurma();
+            ex_Turma.MdiParent = this;
+            ex_Turma.Show();
+        }
     }
 }

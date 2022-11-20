@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbDescri = new System.Windows.Forms.ComboBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.txtaAlunos = new System.Windows.Forms.TextBox();
-            this.txtAulas = new System.Windows.Forms.TextBox();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.txtAulas = new System.Windows.Forms.TextBox();
+            this.txtaAlunos = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.cbDescri = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,32 +59,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modalidades";
             // 
-            // label1
+            // btnAtualizar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Descrição:";
+            this.btnAtualizar.Location = new System.Drawing.Point(26, 227);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(349, 24);
+            this.btnAtualizar.TabIndex = 8;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txtAulas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Preço:";
+            this.txtAulas.Location = new System.Drawing.Point(112, 186);
+            this.txtAulas.Name = "txtAulas";
+            this.txtAulas.Size = new System.Drawing.Size(263, 20);
+            this.txtAulas.TabIndex = 7;
             // 
-            // label3
+            // txtaAlunos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Qtde de Alunos";
+            this.txtaAlunos.Location = new System.Drawing.Point(112, 142);
+            this.txtaAlunos.Name = "txtaAlunos";
+            this.txtaAlunos.Size = new System.Drawing.Size(263, 20);
+            this.txtaAlunos.TabIndex = 6;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Location = new System.Drawing.Point(91, 99);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(284, 20);
+            this.txtPreco.TabIndex = 5;
+            // 
+            // cbDescri
+            // 
+            this.cbDescri.FormattingEnabled = true;
+            this.cbDescri.Location = new System.Drawing.Point(91, 55);
+            this.cbDescri.Name = "cbDescri";
+            this.cbDescri.Size = new System.Drawing.Size(284, 21);
+            this.cbDescri.TabIndex = 4;
             // 
             // label4
             // 
@@ -95,43 +106,32 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Qtde de Aulas:";
             // 
-            // cbDescri
+            // label3
             // 
-            this.cbDescri.FormattingEnabled = true;
-            this.cbDescri.Location = new System.Drawing.Point(91, 55);
-            this.cbDescri.Name = "cbDescri";
-            this.cbDescri.Size = new System.Drawing.Size(284, 21);
-            this.cbDescri.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Qtde de Alunos";
             // 
-            // txtPreco
+            // label2
             // 
-            this.txtPreco.Location = new System.Drawing.Point(91, 99);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(284, 20);
-            this.txtPreco.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Preço:";
             // 
-            // txtaAlunos
+            // label1
             // 
-            this.txtaAlunos.Location = new System.Drawing.Point(112, 142);
-            this.txtaAlunos.Name = "txtaAlunos";
-            this.txtaAlunos.Size = new System.Drawing.Size(263, 20);
-            this.txtaAlunos.TabIndex = 6;
-            // 
-            // txtAulas
-            // 
-            this.txtAulas.Location = new System.Drawing.Point(112, 186);
-            this.txtAulas.Name = "txtAulas";
-            this.txtAulas.Size = new System.Drawing.Size(263, 20);
-            this.txtAulas.TabIndex = 7;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Location = new System.Drawing.Point(26, 227);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(349, 24);
-            this.btnAtualizar.TabIndex = 8;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Descrição:";
             // 
             // AtualizarModalidade
             // 
@@ -141,6 +141,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AtualizarModalidade";
             this.Text = "Atualizar Modalidade";
+            this.Load += new System.EventHandler(this.AtualizarModalidade_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

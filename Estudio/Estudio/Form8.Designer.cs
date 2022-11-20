@@ -30,15 +30,15 @@ namespace Estudio
         private void InitializeComponent()
         {
             this.groupbox_1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtProfessor = new System.Windows.Forms.TextBox();
-            this.txtDia = new System.Windows.Forms.TextBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtHora = new System.Windows.Forms.TextBox();
+            this.txtDia = new System.Windows.Forms.TextBox();
+            this.txtProfessor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupbox_1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,14 +60,62 @@ namespace Estudio
             this.groupbox_1.TabStop = false;
             this.groupbox_1.Text = "Turma";
             // 
-            // label1
+            // comboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modalidade:";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(104, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(320, 21);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(6, 145);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(463, 23);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
+            // txtHora
+            // 
+            this.txtHora.Location = new System.Drawing.Point(104, 109);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(319, 20);
+            this.txtHora.TabIndex = 7;
+            // 
+            // txtDia
+            // 
+            this.txtDia.Location = new System.Drawing.Point(104, 82);
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(319, 20);
+            this.txtDia.TabIndex = 6;
+            // 
+            // txtProfessor
+            // 
+            this.txtProfessor.Location = new System.Drawing.Point(104, 53);
+            this.txtProfessor.Name = "txtProfessor";
+            this.txtProfessor.Size = new System.Drawing.Size(319, 20);
+            this.txtProfessor.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(60, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Hora:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Dia da Semana:";
             // 
             // label2
             // 
@@ -79,61 +127,14 @@ namespace Estudio
             this.label2.Text = "Professor:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Dia da Semana:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Hora:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(320, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // txtProfessor
-            // 
-            this.txtProfessor.Location = new System.Drawing.Point(104, 53);
-            this.txtProfessor.Name = "txtProfessor";
-            this.txtProfessor.Size = new System.Drawing.Size(319, 20);
-            this.txtProfessor.TabIndex = 5;
-            // 
-            // txtDia
-            // 
-            this.txtDia.Location = new System.Drawing.Point(104, 82);
-            this.txtDia.Name = "txtDia";
-            this.txtDia.Size = new System.Drawing.Size(319, 20);
-            this.txtDia.TabIndex = 6;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(104, 109);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(319, 20);
-            this.txtHora.TabIndex = 7;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(6, 145);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(463, 23);
-            this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modalidade:";
             // 
             // Cad_Turma
             // 

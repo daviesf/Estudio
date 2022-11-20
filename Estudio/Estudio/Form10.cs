@@ -16,5 +16,10 @@ namespace Estudio
         {
             InitializeComponent();
         }
+
+        private void AtualizarModalidade_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
