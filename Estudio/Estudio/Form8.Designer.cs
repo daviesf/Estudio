@@ -30,10 +30,16 @@ namespace Estudio
         private void InitializeComponent()
         {
             this.groupbox_1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.chSexta = new System.Windows.Forms.CheckBox();
+            this.chSabado = new System.Windows.Forms.CheckBox();
+            this.chQuarta = new System.Windows.Forms.CheckBox();
+            this.chQuinta = new System.Windows.Forms.CheckBox();
+            this.chTerca = new System.Windows.Forms.CheckBox();
+            this.chSegunda = new System.Windows.Forms.CheckBox();
+            this.chDomingo = new System.Windows.Forms.CheckBox();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.cbModalidade = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txtHora = new System.Windows.Forms.TextBox();
-            this.txtDia = new System.Windows.Forms.TextBox();
             this.txtProfessor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,10 +50,16 @@ namespace Estudio
             // 
             // groupbox_1
             // 
-            this.groupbox_1.Controls.Add(this.comboBox1);
+            this.groupbox_1.Controls.Add(this.chSexta);
+            this.groupbox_1.Controls.Add(this.chSabado);
+            this.groupbox_1.Controls.Add(this.chQuarta);
+            this.groupbox_1.Controls.Add(this.chQuinta);
+            this.groupbox_1.Controls.Add(this.chTerca);
+            this.groupbox_1.Controls.Add(this.chSegunda);
+            this.groupbox_1.Controls.Add(this.chDomingo);
+            this.groupbox_1.Controls.Add(this.dtpHora);
+            this.groupbox_1.Controls.Add(this.cbModalidade);
             this.groupbox_1.Controls.Add(this.btnCadastrar);
-            this.groupbox_1.Controls.Add(this.txtHora);
-            this.groupbox_1.Controls.Add(this.txtDia);
             this.groupbox_1.Controls.Add(this.txtProfessor);
             this.groupbox_1.Controls.Add(this.label4);
             this.groupbox_1.Controls.Add(this.label3);
@@ -55,54 +67,121 @@ namespace Estudio
             this.groupbox_1.Controls.Add(this.label1);
             this.groupbox_1.Location = new System.Drawing.Point(12, 12);
             this.groupbox_1.Name = "groupbox_1";
-            this.groupbox_1.Size = new System.Drawing.Size(475, 179);
+            this.groupbox_1.Size = new System.Drawing.Size(437, 218);
             this.groupbox_1.TabIndex = 1;
             this.groupbox_1.TabStop = false;
             this.groupbox_1.Text = "Turma";
             // 
-            // comboBox1
+            // chSexta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(320, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.chSexta.AutoSize = true;
+            this.chSexta.Location = new System.Drawing.Point(177, 105);
+            this.chSexta.Name = "chSexta";
+            this.chSexta.Size = new System.Drawing.Size(53, 17);
+            this.chSexta.TabIndex = 16;
+            this.chSexta.Text = "Sexta";
+            this.chSexta.UseVisualStyleBackColor = true;
+            // 
+            // chSabado
+            // 
+            this.chSabado.AutoSize = true;
+            this.chSabado.Location = new System.Drawing.Point(252, 82);
+            this.chSabado.Name = "chSabado";
+            this.chSabado.Size = new System.Drawing.Size(63, 17);
+            this.chSabado.TabIndex = 15;
+            this.chSabado.Text = "Sábado";
+            this.chSabado.UseVisualStyleBackColor = true;
+            // 
+            // chQuarta
+            // 
+            this.chQuarta.AutoSize = true;
+            this.chQuarta.Location = new System.Drawing.Point(104, 128);
+            this.chQuarta.Name = "chQuarta";
+            this.chQuarta.Size = new System.Drawing.Size(58, 17);
+            this.chQuarta.TabIndex = 14;
+            this.chQuarta.Text = "Quarta";
+            this.chQuarta.UseVisualStyleBackColor = true;
+            // 
+            // chQuinta
+            // 
+            this.chQuinta.AutoSize = true;
+            this.chQuinta.Location = new System.Drawing.Point(177, 82);
+            this.chQuinta.Name = "chQuinta";
+            this.chQuinta.Size = new System.Drawing.Size(57, 17);
+            this.chQuinta.TabIndex = 13;
+            this.chQuinta.Text = "Quinta";
+            this.chQuinta.UseVisualStyleBackColor = true;
+            // 
+            // chTerca
+            // 
+            this.chTerca.AutoSize = true;
+            this.chTerca.Location = new System.Drawing.Point(104, 105);
+            this.chTerca.Name = "chTerca";
+            this.chTerca.Size = new System.Drawing.Size(54, 17);
+            this.chTerca.TabIndex = 12;
+            this.chTerca.Text = "Terça";
+            this.chTerca.UseVisualStyleBackColor = true;
+            // 
+            // chSegunda
+            // 
+            this.chSegunda.AutoSize = true;
+            this.chSegunda.Location = new System.Drawing.Point(104, 82);
+            this.chSegunda.Name = "chSegunda";
+            this.chSegunda.Size = new System.Drawing.Size(69, 17);
+            this.chSegunda.TabIndex = 11;
+            this.chSegunda.Text = "Segunda";
+            this.chSegunda.UseVisualStyleBackColor = true;
+            // 
+            // chDomingo
+            // 
+            this.chDomingo.AutoSize = true;
+            this.chDomingo.Location = new System.Drawing.Point(252, 105);
+            this.chDomingo.Name = "chDomingo";
+            this.chDomingo.Size = new System.Drawing.Size(68, 17);
+            this.chDomingo.TabIndex = 10;
+            this.chDomingo.Text = "Domingo";
+            this.chDomingo.UseVisualStyleBackColor = true;
+            // 
+            // dtpHora
+            // 
+            this.dtpHora.CustomFormat = "hh:mm";
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpHora.Location = new System.Drawing.Point(104, 157);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.Size = new System.Drawing.Size(69, 20);
+            this.dtpHora.TabIndex = 9;
+            // 
+            // cbModalidade
+            // 
+            this.cbModalidade.FormattingEnabled = true;
+            this.cbModalidade.Location = new System.Drawing.Point(104, 22);
+            this.cbModalidade.Name = "cbModalidade";
+            this.cbModalidade.Size = new System.Drawing.Size(320, 21);
+            this.cbModalidade.TabIndex = 2;
+            this.cbModalidade.SelectedIndexChanged += new System.EventHandler(this.cbModalidade_SelectedIndexChanged);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(6, 145);
+            this.btnCadastrar.Location = new System.Drawing.Point(6, 183);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(463, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(425, 23);
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(104, 109);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(319, 20);
-            this.txtHora.TabIndex = 7;
-            // 
-            // txtDia
-            // 
-            this.txtDia.Location = new System.Drawing.Point(104, 82);
-            this.txtDia.Name = "txtDia";
-            this.txtDia.Size = new System.Drawing.Size(319, 20);
-            this.txtDia.TabIndex = 6;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtProfessor
             // 
             this.txtProfessor.Location = new System.Drawing.Point(104, 53);
             this.txtProfessor.Name = "txtProfessor";
-            this.txtProfessor.Size = new System.Drawing.Size(319, 20);
+            this.txtProfessor.Size = new System.Drawing.Size(320, 20);
             this.txtProfessor.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 112);
+            this.label4.Location = new System.Drawing.Point(60, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 3;
@@ -140,7 +219,7 @@ namespace Estudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 205);
+            this.ClientSize = new System.Drawing.Size(456, 240);
             this.Controls.Add(this.groupbox_1);
             this.Name = "Cad_Turma";
             this.Text = "Cadastrar Turma";
@@ -153,14 +232,20 @@ namespace Estudio
         #endregion
 
         private System.Windows.Forms.GroupBox groupbox_1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbModalidade;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox txtHora;
-        private System.Windows.Forms.TextBox txtDia;
         private System.Windows.Forms.TextBox txtProfessor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chSexta;
+        private System.Windows.Forms.CheckBox chSabado;
+        private System.Windows.Forms.CheckBox chQuarta;
+        private System.Windows.Forms.CheckBox chQuinta;
+        private System.Windows.Forms.CheckBox chTerca;
+        private System.Windows.Forms.CheckBox chSegunda;
+        private System.Windows.Forms.CheckBox chDomingo;
+        private System.Windows.Forms.DateTimePicker dtpHora;
     }
 }

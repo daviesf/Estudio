@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,26 @@ namespace Estudio
         public ExcluirTurma()
         {
             InitializeComponent();
+            carregaCombo();
+        }
+
+        public void carregaCombo()
+        {
+            Modalidade m = new Modalidade();
+            MySqlDataReader r = m.consultarTodasModalidade();
+            while (r.Read())
+            {
+                cbModalidade.Items.Add(r["descricaoModalidade"].ToString());
+            }
+            DAO_Conexao.con.Close();
         }
 
         private void ExcluirTurma_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbModalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

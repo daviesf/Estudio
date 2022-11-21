@@ -48,18 +48,18 @@
             this.groupBox1.Controls.Add(this.cbHora);
             this.groupBox1.Controls.Add(this.cbDia);
             this.groupBox1.Controls.Add(this.cbModalidade);
-            this.groupBox1.Location = new System.Drawing.Point(47, 33);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 233);
+            this.groupBox1.Size = new System.Drawing.Size(468, 151);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Turma";
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(32, 189);
+            this.btnExcluir.Location = new System.Drawing.Point(6, 116);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(430, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(452, 23);
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 147);
+            this.label3.Location = new System.Drawing.Point(56, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 5;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 101);
+            this.label2.Location = new System.Drawing.Point(6, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 55);
+            this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 3;
@@ -94,7 +94,7 @@
             // cbHora
             // 
             this.cbHora.FormattingEnabled = true;
-            this.cbHora.Location = new System.Drawing.Point(121, 144);
+            this.cbHora.Location = new System.Drawing.Point(95, 83);
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(341, 21);
             this.cbHora.TabIndex = 2;
@@ -102,7 +102,7 @@
             // cbDia
             // 
             this.cbDia.FormattingEnabled = true;
-            this.cbDia.Location = new System.Drawing.Point(121, 98);
+            this.cbDia.Location = new System.Drawing.Point(95, 54);
             this.cbDia.Name = "cbDia";
             this.cbDia.Size = new System.Drawing.Size(341, 21);
             this.cbDia.TabIndex = 1;
@@ -110,16 +110,17 @@
             // cbModalidade
             // 
             this.cbModalidade.FormattingEnabled = true;
-            this.cbModalidade.Location = new System.Drawing.Point(121, 52);
+            this.cbModalidade.Location = new System.Drawing.Point(95, 25);
             this.cbModalidade.Name = "cbModalidade";
             this.cbModalidade.Size = new System.Drawing.Size(341, 21);
             this.cbModalidade.TabIndex = 0;
+            this.cbModalidade.SelectedIndexChanged += new System.EventHandler(this.cbModalidade_SelectedIndexChanged);
             // 
             // ExcluirTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 312);
+            this.ClientSize = new System.Drawing.Size(492, 169);
             this.Controls.Add(this.groupBox1);
             this.Name = "ExcluirTurma";
             this.Text = "Excluir Turma";

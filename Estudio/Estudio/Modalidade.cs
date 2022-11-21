@@ -135,5 +135,30 @@ namespace Estudio
             }
             return flag;
         }
+
+        public int buscaId()
+        {
+            MySqlDataReader reader = null;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand id = new MySqlCommand("SELECT idEstudio_Modalidade FROM Estudio_Modalidade WHERE descricaoModalidade like '" + Descricao + "'", DAO_Conexao.con);
+                reader = id.ExecuteReader();
+                if (reader.Read())
+                {
+                    return Int32.Parse(reader["idEstudio_Modalidade"].ToString());
+                }
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return -1;
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+        }
     }
 }

@@ -14,10 +14,12 @@ namespace Estudio
 {
     public partial class Cad_Turma : Form
     {
+        public static int id;
         public Cad_Turma()
         {
             InitializeComponent();
             carregaCombo();
+            id = 0;
         }
 
         public void carregaCombo()
@@ -26,7 +28,7 @@ namespace Estudio
             MySqlDataReader r = m.consultarTodasModalidade();
             while (r.Read())
             {
-                comboBox1.Items.Add(r["descricaoModalidade"].ToString());
+                cbModalidade.Items.Add(r["descricaoModalidade"].ToString());
             }
             DAO_Conexao.con.Close();
         }
@@ -36,13 +38,65 @@ namespace Estudio
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public String giveSplit()
         {
-            Modalidade m = new Modalidade(comboBox1.Text);
-            MySqlDataReader r = m.consultarModalidade();
-            r.Read();
-            txtDesc.Text = r["descricaoModalidade"].ToString();
-            DAO_Conexao.con.Close();
+            String toret="";
+            if (chSegunda.Checked == true)
+                toret = toret + "Segunda,";
+            if (chTerca.Checked == true)
+                toret = toret + "Terça,";
+            if (chQuarta.Checked == true)
+                toret = toret + "Quarta,";
+            if (chQuinta.Checked == true)
+                toret = toret + "Quinta,";
+            if (chSexta.Checked == true)
+                toret = toret + "Sexta,";
+            if (chSabado.Checked == true)
+                toret = toret + "Sábado,";
+            if (chDomingo.Checked == true)
+                toret = toret + "Domingo";
+            String[] words = toret.Split(',');
+            toret = "a[-+";
+            foreach (var word in words)
+            {
+                toret = toret + ", " + word;
+            }
+            toret = toret.Replace("a[-+, ","");
+            return toret;
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            String semana;
+            semana = giveSplit();
+
+            if (id == -1)
+            {
+                MessageBox.Show("Modalidade inválida.");
+            }
+            else
+            {
+                Turma t = new Turma(id, txtProfessor.Text, semana, dtpHora.Text);
+                if (t.cadastrarTurma())
+                    MessageBox.Show("Cadastro feito com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Erro de cadastro!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cbModalidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Modalidade m = new Modalidade(cbModalidade.Text);
+            int a = m.buscaId();
+            if (a == -1)
+            {
+                MessageBox.Show("Erro interno. (ID não encontrado)", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                id = a;
+            }
+        }
+
     }
 }
