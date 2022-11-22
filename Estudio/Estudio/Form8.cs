@@ -61,7 +61,9 @@ namespace Estudio
             {
                 toret = toret + ", " + word;
             }
+            toret = toret + "wd+!";
             toret = toret.Replace("a[-+, ","");
+            toret = toret.Replace(", wd+!", "");
             return toret;
         }
 
@@ -78,7 +80,17 @@ namespace Estudio
             {
                 Turma t = new Turma(id, txtProfessor.Text, semana, dtpHora.Text);
                 if (t.cadastrarTurma())
+                {
                     MessageBox.Show("Cadastro feito com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtProfessor.Clear();
+                    chDomingo.Checked = false;
+                    chSegunda.Checked = false;
+                    chTerca.Checked = false;
+                    chQuarta.Checked = false;
+                    chQuinta.Checked = false;
+                    chSexta.Checked = false;
+                    chSabado.Checked = false;
+                }
                 else
                     MessageBox.Show("Erro de cadastro!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -98,5 +110,9 @@ namespace Estudio
             }
         }
 
+        private void Cad_Turma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

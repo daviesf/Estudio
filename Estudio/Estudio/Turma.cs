@@ -32,6 +32,14 @@ namespace Estudio
             this.dia_semana = dia_semana;
             this.id_modalidade = id_modalidade;
         }
+
+        public Turma(int id_modalidade, string dia_semana, string hora)
+        {
+            this.id_modalidade = id_modalidade;
+            this.dia_semana = dia_semana;
+            this.hora = hora;
+        }
+
         public int Id_modalidade { get => id_modalidade; set => id_modalidade = value; }
         public string Professor { get => professor; set => professor = value; }
         public string Dia_semana { get => dia_semana; set => dia_semana = value; }
@@ -65,7 +73,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("DELETE FROM Estudio_Turma WHERE id_modalidade=" + id_modalidade + " AND Dia_semana like '" + dia_semana + "' AND Hora like '" + hora + "'", DAO_Conexao.con);
                 insere.ExecuteNonQuery();
                 cd = true;
 
@@ -79,6 +87,42 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
             return cd;
+        }
+
+        public MySqlDataReader buscaTurma1()
+        {
+            MySqlDataReader res = null;
+
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma WHERE id_modalidade=" + id_modalidade + "", DAO_Conexao.con);
+                res = consulta.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                DAO_Conexao.con.Close();
+            }
+            return res;
+        }
+
+        public MySqlDataReader buscaTurma2()
+        {
+            MySqlDataReader res = null;
+
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma WHERE id_modalidade=" + id_modalidade + " AND Dia_semana like '" + dia_semana + "'", DAO_Conexao.con);
+                res = consulta.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                DAO_Conexao.con.Close();
+            }
+            return res;
         }
     }
 }

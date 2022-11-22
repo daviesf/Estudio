@@ -144,7 +144,7 @@ namespace Estudio
             // 
             // dtpHora
             // 
-            this.dtpHora.CustomFormat = "hh:mm";
+            this.dtpHora.CustomFormat = "HH:mm";
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpHora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtpHora.Location = new System.Drawing.Point(104, 157);
@@ -223,6 +223,7 @@ namespace Estudio
             this.Controls.Add(this.groupbox_1);
             this.Name = "Cad_Turma";
             this.Text = "Cadastrar Turma";
+            this.Load += new System.EventHandler(this.Cad_Turma_Load);
             this.groupbox_1.ResumeLayout(false);
             this.groupbox_1.PerformLayout();
             this.ResumeLayout(false);

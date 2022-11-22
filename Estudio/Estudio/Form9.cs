@@ -17,6 +17,7 @@ namespace Estudio
         {
             InitializeComponent();
             carregaCombo();
+
         }
 
         public void carregaCombo()
@@ -37,7 +38,51 @@ namespace Estudio
 
         private void cbModalidade_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cbDia.Items.Clear();
+            cbHora.Items.Clear();
+            cbHora.Text = String.Empty;
+            cbDia.Text = String.Empty;
+            Modalidade m = new Modalidade(cbModalidade.Text);
+            Turma t = new Turma(m.buscaId());
+            MySqlDataReader reader = t.buscaTurma1();
+            while (reader.Read())
+            {
+                cbDia.Items.Add(reader["Dia_semana"]);
+            }
+            DAO_Conexao.con.Close();
+        }
 
+        private void cbDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbHora.Items.Clear();
+            cbHora.Text = String.Empty;
+            Modalidade m = new Modalidade(cbModalidade.Text);
+            Turma t = new Turma(m.buscaId(), cbDia.Text);
+            MySqlDataReader reader = t.buscaTurma2();
+            while (reader.Read())
+            {
+                cbHora.Items.Add(reader["Hora"]);
+            }
+            DAO_Conexao.con.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Modalidade m = new Modalidade(cbModalidade.Text);
+            Turma t = new Turma(m.buscaId(), cbDia.Text, cbHora.Text);
+            if (t.excluirTurma())
+            {
+                MessageBox.Show("Exclusão realizada com sucesso", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbModalidade.Items.Clear();
+                cbModalidade.Text = String.Empty;
+                cbDia.Items.Clear();
+                cbDia.Text = String.Empty;
+                cbHora.Items.Clear();
+                cbHora.Text = String.Empty;
+                carregaCombo();
+            }
+            else
+                MessageBox.Show("Erro de exclusão!", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

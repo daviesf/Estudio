@@ -63,6 +63,7 @@
             this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label3
             // 
@@ -106,6 +107,7 @@
             this.cbDia.Name = "cbDia";
             this.cbDia.Size = new System.Drawing.Size(341, 21);
             this.cbDia.TabIndex = 1;
+            this.cbDia.SelectedIndexChanged += new System.EventHandler(this.cbDia_SelectedIndexChanged);
             // 
             // cbModalidade
             // 
