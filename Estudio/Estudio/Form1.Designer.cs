@@ -50,6 +50,7 @@ namespace Estudio
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.teToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,8 @@ namespace Estudio
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
             this.modalidadeToolStripMenuItem,
-            this.turmaToolStripMenuItem});
+            this.turmaToolStripMenuItem,
+            this.teToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(918, 24);
@@ -240,6 +242,14 @@ namespace Estudio
             this.label1.Text = "Usuário";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // teToolStripMenuItem
+            // 
+            this.teToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.teToolStripMenuItem.ForeColor = System.Drawing.Color.Maroon;
+            this.teToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.teToolStripMenuItem.Name = "teToolStripMenuItem";
+            this.teToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +294,7 @@ namespace Estudio
         private System.Windows.Forms.ToolStripMenuItem turmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastarTurmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirTurmaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teToolStripMenuItem;
     }
 }
 

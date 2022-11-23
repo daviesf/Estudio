@@ -57,6 +57,7 @@ namespace Estudio
                 MessageBox.Show("Usuário ADM") ;
                 groupBox1.Visible = false;
                 menuStrip1.Enabled = true;
+                teToolStripMenuItem.Text = "Bem-vindo, administrador " + char.ToUpper(txtUser.Text[0]) + txtUser.Text.Substring(1) + "!";
             }
             if (tipo == 2)
             {
@@ -64,6 +65,7 @@ namespace Estudio
                 groupBox1.Visible = false;
                 menuStrip1.Enabled = true;
                 cadastrarLoginToolStripMenuItem.Enabled = false;
+                teToolStripMenuItem.Text = "Bem-vindo, usuário " + char.ToUpper(txtUser.Text[0]) + txtUser.Text.Substring(1) + "!";
             }
         }
 

@@ -99,6 +99,7 @@
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(341, 21);
             this.cbHora.TabIndex = 2;
+            this.cbHora.SelectedIndexChanged += new System.EventHandler(this.cbHora_SelectedIndexChanged);
             // 
             // cbDia
             // 

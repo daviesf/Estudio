@@ -40,26 +40,26 @@ namespace Estudio
 
         public String giveSplit()
         {
-            String toret="";
+            String toret = String.Empty;
             if (chSegunda.Checked == true)
-                toret = toret + "Segunda,";
+                toret += "Segunda,";
             if (chTerca.Checked == true)
-                toret = toret + "Terça,";
+                toret += "Terça,";
             if (chQuarta.Checked == true)
-                toret = toret + "Quarta,";
+                toret += "Quarta,";
             if (chQuinta.Checked == true)
-                toret = toret + "Quinta,";
+                toret += "Quinta,";
             if (chSexta.Checked == true)
-                toret = toret + "Sexta,";
+                toret += "Sexta,";
             if (chSabado.Checked == true)
-                toret = toret + "Sábado,";
+                toret += "Sábado,";
             if (chDomingo.Checked == true)
-                toret = toret + "Domingo,";
+                toret += "Domingo,";
             String[] words = toret.Split(',');
             toret = "a[-+";
             foreach (var word in words)
             {
-                toret = toret + ", " + word;
+                toret += ", " + word;
             }
             toret = toret + "wd+!";
             toret = toret.Replace("a[-+, ","");
@@ -69,8 +69,7 @@ namespace Estudio
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            String semana;
-            semana = giveSplit();
+            String semana = giveSplit();
 
             if (id == -1)
             {
