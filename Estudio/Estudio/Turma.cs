@@ -96,7 +96,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma WHERE id_modalidade=" + id_modalidade + "", DAO_Conexao.con);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma WHERE id_modalidade=" + id_modalidade + " GROUP BY dia_semana", DAO_Conexao.con);
                 res = consulta.ExecuteReader();
             }
             catch (Exception ex)

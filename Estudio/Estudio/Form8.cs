@@ -54,7 +54,7 @@ namespace Estudio
             if (chSabado.Checked == true)
                 toret = toret + "Sábado,";
             if (chDomingo.Checked == true)
-                toret = toret + "Domingo";
+                toret = toret + "Domingo,";
             String[] words = toret.Split(',');
             toret = "a[-+";
             foreach (var word in words)

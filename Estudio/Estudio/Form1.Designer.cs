@@ -163,14 +163,14 @@ namespace Estudio
             // cadastarTurmaToolStripMenuItem
             // 
             this.cadastarTurmaToolStripMenuItem.Name = "cadastarTurmaToolStripMenuItem";
-            this.cadastarTurmaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastarTurmaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cadastarTurmaToolStripMenuItem.Text = "Cadastar Turma";
             this.cadastarTurmaToolStripMenuItem.Click += new System.EventHandler(this.cadastarTurmaToolStripMenuItem_Click);
             // 
             // excluirTurmaToolStripMenuItem
             // 
             this.excluirTurmaToolStripMenuItem.Name = "excluirTurmaToolStripMenuItem";
-            this.excluirTurmaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirTurmaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.excluirTurmaToolStripMenuItem.Text = "Excluir Turma";
             this.excluirTurmaToolStripMenuItem.Click += new System.EventHandler(this.excluirTurmaToolStripMenuItem_Click);
             // 
